@@ -22,7 +22,8 @@ document.querySelectorAll('.scroll-fade').forEach((el) => observer.observe(el));
 
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
-gtag('config', 'G-8NKFR3JWY5');
+gtag('js', new Date());
+gtag('config', 'G-MQHFVGWY5Q');
 
 class FilmGrainOverlay {
   constructor() {
