@@ -20,6 +20,10 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll('.scroll-fade').forEach((el) => observer.observe(el));
 
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('config', 'G-8NKFR3JWY5');
+
 class FilmGrainOverlay {
   constructor() {
     this.canvas = document.getElementById('noiseCanvas');
@@ -49,10 +53,10 @@ class FilmGrainOverlay {
           for (let dy = 0; dy < grain && y + dy < this.height; dy++) {
             for (let dx = 0; dx < grain && x + dx < this.width; dx++) {
               const index = ((y + dy) * this.width + (x + dx)) * 4;
-              data[index] = brightness;
-              data[index + 1] = brightness;
-              data[index + 2] = brightness;
-              data[index + 3] = 255;
+              data[ index ] = brightness;
+              data[ index + 1 ] = brightness;
+              data[ index + 2 ] = brightness;
+              data[ index + 3 ] = 255;
             }
           }
         }
